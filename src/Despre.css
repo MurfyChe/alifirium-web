@@ -1,0 +1,20 @@
+.despre-section {
+    padding: 50px 20px;
+    background: #ffffff;
+    text-align: center;
+  }
+  
+  .despre-section h2 {
+    font-size: 2.5em;
+    color: #264653;
+    margin-bottom: 20px;
+  }
+  
+  .despre-section p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #333;
+    margin: 10px auto; /* Centrarea textului */
+    max-width: 800px; /* Lățimea maximă */
+  }
+  

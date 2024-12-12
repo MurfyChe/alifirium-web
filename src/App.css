@@ -1,0 +1,235 @@
+/* Stiluri generale */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #ffffff;
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asigură că întreaga înălțime este folosită */
+}
+
+.container {
+  max-width: 100vw;
+  margin: 0 auto;
+  flex: 1; /* Permite ca conținutul să ocupe spațiu între header și footer */
+}
+
+/* Header */
+.main-header {
+  background: #2a9d8f;
+  color: #fff;
+  padding: 20px 0;
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.main-header h1 {
+  text-align: center;
+  margin: 0;
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.main-nav ul li {
+  margin: 0 15px;
+}
+
+.main-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Home Section */
+.home-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: #ffffff;
+}
+
+.home-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.home-section p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.home-section .btn {
+  padding: 10px 20px;
+  background: #264653;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.home-section .btn:hover {
+  background: #1b323d;
+}
+
+/* Products Section */
+.products-section {
+  padding: 50px 20px;
+  background: #ffffff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-card h3 {
+  font-size: 1.5em;
+  margin: 15px 0;
+}
+
+.product-card p {
+  margin: 10px 0;
+}
+
+.product-card button {
+  padding: 10px 15px;
+  background: #2a9d8f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.product-card button:hover {
+  background: #21867a;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* About Section */
+.about-section {
+  padding: 50px 20px;
+  background: #e9ecef;
+}
+
+.about-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 50px 20px;
+  background: #f1f1f1;
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-section form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-section form input,
+.contact-section form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1em;
+}
+
+.contact-section form button {
+  padding: 10px;
+  background: #264653;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.contact-section form button:hover {
+  background: #1b323d;
+}
+
+/* Footer */
+.main-footer {
+  background: #2a9d8f;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  margin-top: auto; /* Asigură că footerul rămâne lipit de partea de jos */
+}
+
+.main-footer p {
+  margin: 0;
+}
