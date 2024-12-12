@@ -27,7 +27,7 @@ function App() {
             element={
               <>
                 <section id="home" className="home-section">
-                  <h2>Bine ați venit la Alifirium</h2>
+                  <h2>Bine ați venit la Alifirium!</h2>
                   <p>Descoperiți gama noastră de alifii medicinale, realizate cu grijă și din ingrediente naturale.</p>
                   <Link to="/products" className="btn">Vezi Produse</Link>
                 </section>
