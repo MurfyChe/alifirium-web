@@ -19,6 +19,7 @@ Alifirium este o aplicație web destinată promovării și vânzării produselor
 - **🔗 React Router**: Permite navigarea între paginile aplicației.
 - **🎨 CSS**: Folosit pentru stilizarea componentelor și pentru designul responsiv.
 - **🖼️ Font Awesome** (opțional): Pentru iconițele din aplicație (dacă se adaugă în viitor).
+- **🗄️ Cassandra DB**: Pentru salvarea produselor, utilizatorilor si a comenzilor de produse.
 
 ## Instalare
 
