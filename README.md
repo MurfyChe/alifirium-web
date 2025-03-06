@@ -1,50 +1,31 @@
-# React + TypeScript + Vite
+# Alifirium Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Alifirium este o aplicație web destinată promovării și vânzării produselor naturale de îngrijire a sănătății, cum ar fi alifiile medicinale. Platforma oferă informații despre produse, o secțiune de contact și o pagină "Despre noi". Este construită folosind React și CSS pentru a oferi o experiență interactivă și prietenoasă utilizatorului.
 
-Currently, two official plugins are available:
+## Caracteristici
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **🪴 Produse naturale**: Găsiți o selecție de alifii medicinale realizate din ingrediente naturale.
+- **🔍 Navigare intuitivă**: Oferă o navigare ușoară între secțiunile aplicației.
+- **📱 Responsive**: Designul este complet responsiv, asigurându-se că aplicația se adaptează la orice dispozitiv (desktop, tabletă, mobil).
+- **🌱 Secțiuni dedicate**:
+  - **🏠 Acasă**: Bine ați venit la Alifirium cu un mesaj introductiv.
+  - **🛍️ Produse**: Oferte de produse cu imagini, descriere și opțiune de cumpărare.
+  - **📖 Despre noi**: Informații despre companie și misiunea acesteia.
+  - **📬 Contact**: Formular pentru a lua legătura cu echipa Alifirium.
 
-## Expanding the ESLint configuration
+## Tehnologii folosite
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **⚛️ React**: Biblioteca JavaScript folosită pentru dezvoltarea interfeței utilizatorului.
+- **🔗 React Router**: Permite navigarea între paginile aplicației.
+- **🎨 CSS**: Folosit pentru stilizarea componentelor și pentru designul responsiv.
+- **🖼️ Font Awesome** (opțional): Pentru iconițele din aplicație (dacă se adaugă în viitor).
+- **🗄️ Cassandra DB**: Pentru salvarea produselor, utilizatorilor si a comenzilor de produse.
 
-- Configure the top-level `parserOptions` property like this:
+## Instalare
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Pentru a rula aplicația pe sistemul tău local, urmează pașii de mai jos:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### 1. Clonează repository-ul
+Clonarea repository-ului pe sistemul tău local:
+```bash
+git clone https://github.com/username/alifirium-web.git
