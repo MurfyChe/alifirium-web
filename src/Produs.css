@@ -1,0 +1,46 @@
+.produs-page {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .produs-details {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .produs-image img {
+    max-width: 300px;
+    border-radius: 8px;
+  }
+  
+  .produs-info h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .produs-info p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .produs-reviews {
+    margin-top: 30px;
+  }
+  
+  .produs-reviews h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  
+  .produs-reviews ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .produs-reviews li {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+  }
+  

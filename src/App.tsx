@@ -4,9 +4,12 @@ import { products } from "./products";
 import "./App.css";
 import Despre from "./Despre";
 import Contact from "./Contact";
+import Produs from "./Produs";
+import { Helmet } from "react-helmet-async";
 
 function App() {
   return (
+    
     <Router>
       <div className="app">
         <header className="main-header">
@@ -25,13 +28,11 @@ function App() {
           <Route
             path="/"
             element={
-              <>
-                <section id="home" className="home-section">
-                  <h2>Bine ați venit la Alifirium!</h2>
-                  <p>Descoperiți gama noastră de alifii medicinale, realizate cu grijă și din ingrediente naturale.</p>
-                  <Link to="/products" className="btn">Vezi Produse</Link>
-                </section>
-              </>
+              <section id="home" className="home-section">
+                <h2>Bine ați venit la Alifirium!</h2>
+                <p>Descoperiți gama noastră de alifii medicinale, realizate cu grijă și din ingrediente naturale.</p>
+                <Link to="/products" className="btn">Vezi Produse</Link>
+              </section>
             }
           />
           <Route
@@ -46,13 +47,14 @@ function App() {
                       <h3>{product.name}</h3>
                       <p>{product.description}</p>
                       <p>Preț: {product.price} RON</p>
-                      <button>Cumpără</button>
+                      <Link to={`/produs/${product.id}`} className="btn">Detalii</Link>
                     </div>
                   ))}
                 </div>
               </section>
             }
           />
+          <Route path="/produs/:id" element={<Produs />} />
           <Route path="/despre" element={<Despre />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
@@ -66,3 +68,5 @@ function App() {
 }
 
 export default App;
+
+
