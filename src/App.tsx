@@ -5,7 +5,9 @@ import "./App.css";
 import Despre from "./Despre";
 import Contact from "./Contact";
 import Produs from "./Produs";
+import Account from "./Account";
 import { Helmet } from "react-helmet-async";
+import { FaUserCircle } from 'react-icons/fa';
 
 function App() {
   return (
@@ -22,6 +24,9 @@ function App() {
               <li><Link to="/contact">Contact</Link></li>
             </ul>
           </nav>
+      <div className="account-icon">
+        <Link to="/account"><FaUserCircle size={30} /></Link>
+      </div>
         </header>
 
         <Routes>
@@ -57,6 +62,7 @@ function App() {
           <Route path="/produs/:id" element={<Produs />} />
           <Route path="/despre" element={<Despre />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/account" element={<Account />} />
         </Routes>
 
         <footer className="main-footer">

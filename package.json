@@ -10,9 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^1.20.3",
+    "cassandra-driver": "^4.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "firebase": "^11.4.0",
+    "jsonwebtoken": "^9.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet-async": "^2.0.5",
+    "react-icons": "^5.5.0",
     "react-router-dom": "^6.28.0"
   },
   "devDependencies": {
@@ -27,5 +36,10 @@
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.15.0",
     "vite": "^6.0.1"
-  }
+  },
+  "description": "Alifirium este o aplicație web destinată promovării și vânzării produselor naturale de îngrijire a sănătății, cum ar fi alifiile medicinale. Platforma oferă informații despre produse, o secțiune de contact și o pagină \"Despre noi\". Este construită folosind React și CSS pentru a oferi o experiență interactivă și prietenoasă utilizatorului.",
+  "main": "eslint.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
