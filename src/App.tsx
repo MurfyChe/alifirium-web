@@ -11,7 +11,6 @@ import { FaUserCircle } from 'react-icons/fa';
 
 function App() {
   return (
-    
     <Router>
       <div className="app">
         <header className="main-header">
@@ -24,9 +23,9 @@ function App() {
               <li><Link to="/contact">Contact</Link></li>
             </ul>
           </nav>
-      <div className="account-icon">
-        <Link to="/account"><FaUserCircle size={30} /></Link>
-      </div>
+          <div className="account-icon">
+            <Link to="/account"><FaUserCircle size={30} /></Link>
+          </div>
         </header>
 
         <Routes>
@@ -48,7 +47,15 @@ function App() {
                 <div className="product-grid">
                   {products.map((product) => (
                     <div key={product.id} className="product-card">
-                      <img src={product.imageUrl} alt={product.name} />
+                      <Link to={`/produs/${product.id}`}>
+                        <img
+                          src={product.imageUrl}
+                          alt={product.name}
+                          onError={(e) => {
+                            e.currentTarget.src = "/produse-imagini/placeholder.png";
+                          }}
+                        />
+                      </Link>
                       <h3>{product.name}</h3>
                       <p>{product.description}</p>
                       <p>Preț: {product.price} RON</p>
@@ -74,5 +81,3 @@ function App() {
 }
 
 export default App;
-
-

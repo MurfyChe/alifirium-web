@@ -273,12 +273,16 @@ body {
   text-decoration: none;
 }
 
+
+
+
+
 .account-page {
   max-width: 500px;
   margin: 20px auto;
   padding: 20px;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }
 
 .account-page h2 {
@@ -290,15 +294,23 @@ body {
 }
 
 .input-group label {
+  font-weight: bold;
 }
 
 .input-group input {
   width: 100%;
   padding: 10px;
-  border: none; /* Remove border */
+  border: none;
   border-radius: 5px;
-  background-color: #fff; /* Make background white for input fields */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  background-color: #161616;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.password-requirement {
+  display: block;
+  font-size: 12px;
+  color: #888; /* Gray color */
+  margin-top: 5px;
 }
 
 .form-buttons {
@@ -310,15 +322,16 @@ body {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  border: none; /* Remove border */
+  border: none;
   border-radius: 5px;
 }
 
 .sign-up-btn {
+  background-color: #4CAF50;
   color: white;
 }
 
 .login-btn {
+  background-color: #007BFF;
   color: white;
 }
-

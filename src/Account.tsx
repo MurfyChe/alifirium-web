@@ -1,20 +1,35 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 
 const Account = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
 
-  const handleLogin = (e: React.FormEvent) => {
+  // Sign Up handler
+  const handleSignUp = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Login with", { email, password });
-    // Add your login functionality here (e.g., API call)
+    try {
+      const response = await axios.post("http://localhost:5000/signup", { email, password });
+      setMessage(response.data.message);
+    } catch (error: any) {
+      setMessage(error.response?.data?.message || "Error occurred");
+    }
   };
 
-  const handleSignUp = (e: React.FormEvent) => {
+  // Login handler
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Sign Up with", { email, password });
-    // Add your sign-up functionality here (e.g., API call)
+    try {
+      const response = await axios.post("http://localhost:5000/login", { email, password });
+      setMessage("Login successful");
+
+      // Store JWT token in localStorage (or sessionStorage)
+      localStorage.setItem("token", response.data.token);
+    } catch (error: any) {
+      setMessage(error.response?.data?.message || "Error occurred");
+    }
   };
 
   return (
@@ -33,6 +48,7 @@ const Account = () => {
         </div>
         <div className="input-group">
           <label htmlFor="password">Password</label>
+          <small className="password-requirement">Minimum 8 characters</small>
           <input
             type="password"
             id="password"
@@ -43,22 +59,16 @@ const Account = () => {
         </div>
 
         <div className="form-buttons">
-          <button
-            type="submit"
-            className="btn sign-up-btn"
-            onClick={handleSignUp}
-          >
+          <button type="submit" className="btn sign-up-btn" onClick={handleSignUp}>
             Sign Up
           </button>
-          <button
-            type="submit"
-            className="btn login-btn"
-            onClick={handleLogin}
-          >
+          <button type="submit" className="btn login-btn" onClick={handleLogin}>
             Login
           </button>
         </div>
       </form>
+
+      {message && <p>{message}</p>}
     </div>
   );
 };

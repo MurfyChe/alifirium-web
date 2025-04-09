@@ -16,7 +16,13 @@ const Produs: React.FC = () => {
     <div className="produs-page">
       <div className="produs-details">
         <div className="produs-image">
-          <img src={product.imageUrl} alt={product.name} />
+          <img
+            src={product.imageUrl}
+            alt={product.name}
+            onError={(e) => {
+              e.currentTarget.src = "/produse-imagini/placeholder.png";
+            }}
+          />
         </div>
         <div className="produs-info">
           <h2>{product.name}</h2>
