@@ -41,10 +41,10 @@ function App() {
 
         {/* Ad spots */}
         <div className="ad-spot ad-spot-left">
-          <img src="path-to-your-ad-image-left.jpg" alt="Ad Left" />
+          <img src="/public/adL.png" alt="Ad Left" />
         </div>
         <div className="ad-spot ad-spot-right">
-          <img src="path-to-your-ad-image-right.jpg" alt="Ad Right" />
+          <img src="/public/adL.png" alt="Ad Right" />
         </div>
 
         <Routes>
