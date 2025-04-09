@@ -1,20 +1,48 @@
 .despre-section {
-    padding: 50px 20px;
-    background: #ffffff;
-    text-align: center;
-  }
-  
-  .despre-section h2 {
-    font-size: 2.5em;
-    color: #264653;
-    margin-bottom: 20px;
-  }
-  
-  .despre-section p {
-    font-size: 1.2em;
-    line-height: 1.8;
-    color: #333;
-    margin: 10px auto; /* Centrarea textului */
-    max-width: 800px; /* Lățimea maximă */
-  }
-  
+  padding: 0 20px; /* Remove top padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh; /* Full screen height */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Shared styles for both themes */
+.despre-section h2 {
+  font-size: 3em; /* Bigger title */
+  margin-bottom: 30px;
+}
+
+.despre-section p {
+  font-size: 1.4em; /* Larger paragraph font */
+  line-height: 1.9;
+  margin: 20px auto;
+  width: 60%; /* 20% space on both sides */
+}
+
+/* Light Theme */
+body[data-theme="light"] .despre-section {
+  background: #ffffff;
+}
+
+body[data-theme="light"] .despre-section h2 {
+  color: #264653;
+}
+
+body[data-theme="light"] .despre-section p {
+  color: #333;
+}
+
+/* Dark Theme */
+body[data-theme="dark"] .despre-section {
+  background: #121212;
+}
+
+body[data-theme="dark"] .despre-section h2 {
+  color: #00d1b2;
+}
+
+body[data-theme="dark"] .despre-section p {
+  color: #dddddd;
+}

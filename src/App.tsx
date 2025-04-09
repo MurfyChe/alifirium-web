@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { products } from "./products";
 import "./App.css";
@@ -10,10 +10,21 @@ import { Helmet } from "react-helmet-async";
 import { FaUserCircle } from 'react-icons/fa';
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    document.body.className = darkMode ? "dark-mode" : "";
+  }, [darkMode]);
+
+  const toggleDarkMode = () => setDarkMode((prev) => !prev);
+
   return (
     <Router>
       <div className="app">
         <header className="main-header">
+          <button onClick={toggleDarkMode} className="mode-toggle">
+            {darkMode ? "🌞 Light Mode" : "🌙 Dark Mode"}
+          </button>
           <h1>Alifirium</h1>
           <nav className="main-nav">
             <ul>
@@ -27,6 +38,14 @@ function App() {
             <Link to="/account"><FaUserCircle size={30} /></Link>
           </div>
         </header>
+
+        {/* Ad spots */}
+        <div className="ad-spot ad-spot-left">
+          <img src="path-to-your-ad-image-left.jpg" alt="Ad Left" />
+        </div>
+        <div className="ad-spot ad-spot-right">
+          <img src="path-to-your-ad-image-right.jpg" alt="Ad Right" />
+        </div>
 
         <Routes>
           <Route
