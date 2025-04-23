@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { products } from "./products";
 import "./App.css";
@@ -6,7 +6,6 @@ import Despre from "./Despre";
 import Contact from "./Contact";
 import Produs from "./Produs";
 import Account from "./Account";
-import { Helmet } from "react-helmet-async";
 import { FaUserCircle } from 'react-icons/fa';
 
 function App() {

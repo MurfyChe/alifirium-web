@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Contact.css";
 
 function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     const { name, email, message } = formData;
     if (!name) {
